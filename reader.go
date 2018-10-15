@@ -187,11 +187,9 @@ func (rdr *NpyReader) GetFloat64() ([]float64, error) {
 	}
 
 	data := make([]float64, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.r, rdr.Endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.r, rdr.Endian, data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -205,11 +203,9 @@ func (rdr *NpyReader) GetFloat32() ([]float32, error) {
 	}
 
 	data := make([]float32, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.r, rdr.Endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.r, rdr.Endian, data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -223,11 +219,9 @@ func (rdr *NpyReader) GetInt8() ([]int8, error) {
 	}
 
 	data := make([]int8, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.r, rdr.Endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.r, rdr.Endian, data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -241,11 +235,9 @@ func (rdr *NpyReader) GetInt16() ([]int16, error) {
 	}
 
 	data := make([]int16, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.r, rdr.Endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.r, rdr.Endian, data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -259,11 +251,9 @@ func (rdr *NpyReader) GetInt32() ([]int32, error) {
 	}
 
 	data := make([]int32, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.r, rdr.Endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.r, rdr.Endian, data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -277,11 +267,9 @@ func (rdr *NpyReader) GetInt64() ([]int64, error) {
 	}
 
 	data := make([]int64, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.r, rdr.Endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.r, rdr.Endian, data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
